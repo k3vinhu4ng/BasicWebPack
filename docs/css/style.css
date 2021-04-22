@@ -3,19 +3,38 @@
     grid-template-columns: [col] auto;
     grid-template-rows: [row] 100px [row] minmax(100px, 593px) [row] auto [row] 50px;
 }
+
+.wrapper1 {
+    display: grid;
+    grid-template-columns: [col] auto;
+    grid-template-rows: [row] 100px [row] auto [row] auto [row] auto [row] 50px;
+
+}
+
+.header {
+    display: grid;
+    grid-template-columns: [col] auto;
+    grid-template-rows: [row] 100px
+}
+
 .branding {
     grid-column: 1;
+    background-color: black;
 }
+
+
 .mainMenu {
+    display:grid;
     grid-column: 2;
     text-align: right;
     line-height: 100px;
+
 }
 .branding, .mainMenu {
     grid-row: 1;
 }
 .heroImage {
-    background-image: url("../assets/images/example.jpg");
+    background-image: url("../assets/images/darksky.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -30,27 +49,35 @@
 .overlay h1 {
     position: relative;
     top: 150px;
-    left: 50px;
+    left: 150px;
     color: white;
     margin: 0;
 }
 
+.content{
+    padding: 10px;
+}
+
+
+
 #boxes {
     display: grid;
     grid-row: 3;
-    height: 200px;
+    height: 130px;
     align-content: space-evenly;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-rows: minmax(100px, auto);
     grid-gap: 3rem;
     grid-column: 1 / span 2;
+    padding: 10px;
 }
 #boxes > div {
-    box-shadow: 2px 2px;
+    box-shadow: 1px 1px;
     border-radius: 5px;
     padding: 10px;
     min-height: auto;
-    background-color: aliceblue;
+    background-color: #bbbbbb;
+
 
 }
 .footer {
@@ -63,7 +90,21 @@
     background-color: #eeeeee;
 }
 .wrapper > div:nth-child(odd) {
+
     background-color: #dddddd;
+
+}
+
+
+.wrapper1 > div{
+
+    background-color: #eeeeee;
+}
+
+.wrapper1 > div:nth-child(3n+0) {
+
+    background-color: #dddddd;
+
 }
 
 menu {
@@ -73,11 +114,24 @@ menu {
 .mainMenu li {
     display: inline;
 }
-.mainMenu menu a {
-    color: red;
+.mainMenu menu a:link, a:visited {
+    color: white;
+    font-size: 1.5em;
+    background-color: darkcyan;
+
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
 }
+.mainMenu menu a:active, a:hover {
+    background-color: red;
+    color: white;
+
+}
+
 .mainMenu ul {
-    margin: 0px;
+    margin: 20px;
 }
 .mainMenu li {
     margin-left: 1rem;
